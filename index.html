@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Etch-A-Sketch</h1>
+    </div>
+    <div class="content">
+        <div class="lhs-container">
+            <div class="lhs">
+                <form autocomplete="off">
+                    <div class="tooltip">
+                        <input type="text" name="size" placeholder="Size">
+                        <span class="tooltip-text">Please enter a number between 1 and 100</span>
+                    </div>
+                    <input type="submit" name="submit" value="Submit">
+                </form>
+                <button id="reset-btn">Clear</button>
+                <button id="random-color-btn">Random Color</button>
+                <div class="color-wheel-container">
+                    <div class="color-wheel">
+                        <input type="color" id="color-select" name="color-select">
+                    </div>
+                    <p>TRY ME!</p>
+                </div>
+            </div>
+        </div>
+        <div class="rhs">
+            <div class="main">
+                <div class="sketch-container"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,1 +1,2 @@
 # etch-a-sketch
+The goal of this project is to build an etch-a-sketch/sketch pad hybrid. This project will demonstrate my DOM manipulation abilities, knowledge of javascript, and my understanding of CSS (primarily CSS Grid Layout).
