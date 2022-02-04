@@ -41,8 +41,10 @@ function removeColor() {
     });
 };
 
+// Functions to execute after submit button is clicked
 function clickSubmit(color="black") {
     let userSize = getSize();
+    userInput.value = "";
     resetSketchContainer();
     createDivs(userSize);
     makeGrid(userSize);
@@ -88,7 +90,7 @@ function makeGrid(size) {
 
 // Add black background-color to squares
 function colorSquare(square, color="black") {
-    userColor.value = color;
+    userColor.value = (color === "black") ? "#000000" : color;
     square.style.cssText = `background-color: ${color}`;
 };
 
@@ -100,8 +102,11 @@ function randomizeColorSquare(square) {
 
 // Get user-inputed size from HTML form
 function getSize() {
-    if (userInput.value / 1 > 0) {
+    if (userInput.value % 1 === 0 && userInput.value / 1 > 0 && userInput.value <= 100) {
         return userInput.value;
+    } else {
+        alert("Please enter a valid size!");
+        return 16; // Default to 16 x 16 grid if input is invalid
     }
 };
 
@@ -124,8 +129,6 @@ function getRGB(rgbString) {
     rgbValues = rgbString.substring(4, rgbString.length - 1).split(",");
     return rgbValues;
 };
-
-console.log(convertRGBtoHex(getRGB("rgb(255, 255, 255)")));
 
 // Generate random RGB value
 function generateRGB() {
